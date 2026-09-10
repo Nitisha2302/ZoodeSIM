@@ -13,7 +13,7 @@ return new class extends Migration
         }
 
         Schema::table('users', function (Blueprint $table) {
-            $table->string('resellportal_client_id')->nullable()->unique()->change();
+            $table->string('resellportal_client_id')->nullable()->change();
         });
 
         Schema::table('esim_orders', function (Blueprint $table) {
@@ -33,7 +33,7 @@ return new class extends Migration
         }
 
         Schema::table('users', function (Blueprint $table) {
-            $table->unsignedBigInteger('resellportal_client_id')->nullable()->unique()->change();
+            $table->unsignedBigInteger('resellportal_client_id')->nullable()->change();
         });
 
         Schema::table('esim_orders', function (Blueprint $table) {

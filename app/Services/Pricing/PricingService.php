@@ -10,7 +10,7 @@ use App\Services\Esim\Contracts\EsimPricingServiceInterface;
 use App\Services\Pricing\Contracts\PricingServiceInterface;
 use App\Support\Money;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Cache;
+// use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 
 class PricingService implements EsimPricingServiceInterface, PricingServiceInterface
@@ -75,18 +75,26 @@ class PricingService implements EsimPricingServiceInterface, PricingServiceInter
     /**
      * @return Collection<int, PricingSlab>
      */
-    public function activeSlabs(): Collection
-    {
-        return Cache::remember(
-            (string) config('pricing.cache_key', 'pricing_slabs_active'),
-            (int) config('pricing.cache_ttl', 3600),
-            fn () => PricingSlab::query()
-                ->active()
-                ->orderBy('priority')
-                ->orderBy('min_amount')
-                ->get(),
-        );
-    }
+    // public function activeSlabs(): Collection
+    // {
+    //     return Cache::remember(
+    //         (string) config('pricing.cache_key', 'pricing_slabs_active'),
+    //         (int) config('pricing.cache_ttl', 3600),
+    //         fn () => PricingSlab::query()
+    //             ->active()
+    //             ->orderBy('priority')
+    //             ->orderBy('min_amount')
+    //             ->get(),
+    //     );
+    // }
+        public function activeSlabs(): Collection
+            {
+                return PricingSlab::query()
+                    ->active()
+                    ->orderBy('priority')
+                    ->orderBy('min_amount')
+                    ->get();
+            }
 
     public static function forgetCache(): void
     {
