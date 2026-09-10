@@ -11,6 +11,15 @@ return [
         'profile' => 'Профиль успешно получен.',
     ],
 
+    'wallet' => [
+        'retrieved' => 'Кошелёк успешно получен.',
+        'adjusted' => 'Кошелёк успешно обновлён.',
+        'direction_invalid' => 'Выберите, пополнить или списать средства.',
+        'amount_required' => 'Укажите сумму.',
+        'amount_format' => 'Укажите корректную сумму с максимум 2 знаками после запятой.',
+        'insufficient_balance' => 'На кошельке недостаточно средств.',
+    ],
+
     'promo' => [
         'invalid' => 'Недействительный реферальный код.',
         'inactive' => 'Этот реферальный код неактивен.',
@@ -41,11 +50,13 @@ return [
         'invalid_country' => 'Недействительная страна.',
         'purchased' => 'eSIM успешно куплен.',
         'order_retrieved' => 'Заказ eSIM успешно получен.',
+        'orders_retrieved' => 'Заказы eSIM успешно получены.',
         'purchase_failed' => 'Не удалось купить eSIM.',
         'package_not_found' => 'Пакет не найден.',
         'package_unavailable' => 'Пакет недоступен.',
         'payment_required' => 'Требуется оплата.',
         'payment_failed' => 'Не удалось подтвердить оплату.',
+        'insufficient_balance' => 'Недостаточно средств на кошельке для покупки этого тарифа.',
         'provisioning_failed' => 'Не удалось активировать eSIM.',
         'already_processed' => 'Заказ уже обработан.',
         'unauthorized_order' => 'Нет доступа к заказу.',
