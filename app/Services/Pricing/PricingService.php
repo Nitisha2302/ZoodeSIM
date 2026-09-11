@@ -10,7 +10,7 @@ use App\Services\Esim\Contracts\EsimPricingServiceInterface;
 use App\Services\Pricing\Contracts\PricingServiceInterface;
 use App\Support\Money;
 use Illuminate\Support\Collection;
-// use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 
 class PricingService implements EsimPricingServiceInterface, PricingServiceInterface
